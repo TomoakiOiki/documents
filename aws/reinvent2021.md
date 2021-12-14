@@ -5,5 +5,19 @@
 - 気になったものピックアップ
   - Amazon ECR がキャッシュリポジトリ機能を発表
     - [これ](https://aws.amazon.com/jp/blogs/aws/announcing-pull-through-cache-repositories-for-amazon-elastic-container-registry/)をよんだ
-    - 従来、要件的にパブリックレジストリからプライベートなECRリポジトリに手動で取り込んで同期してた
-    - 
+    - 要件的にパブリックレジストリからのイメージ取得を制約し、プライベートなECRリポジトリからのみpullを許す場合、手動で同期する必要があった
+    - 手間、ダウンロード制限がありリリースの足枷となることもあった
+    - 公式にパブリックレジストリとECR上のプライベートリポジトリを同期する`プルスルーキャッシュ`なるものを発表
+    - 主な機能
+      - キャッシュとあるように仮にpullしたいイメージがない場合、元のパブリックレジストリから取得してきてくれる
+        - キャッシュは定期的に更新（２４時間とか）
+        - 現状だとpublic-ecrかQuayのみ選択可能
+          - QuayとはRedhadが提供しているエンタープライズコンテナイメージレジストリ
+      - [これ](https://dev.classmethod.jp/articles/ecr-pull-through-cache-repositories/)によるとamd,armあたりの他のアーキテクチャ向けのイメージも同時に取ってきてくれるらしい
+        - マルチアーキテクチャイメージなるもののためらしい
+          - runするイメージ自体は単一だけど起動時にホストのアーキテクチャに合わせて自動でイメージが選択される
+  - AWS Cloud Development Kit(CDK) v2を発表
+    - これを機にちょっとさわってみたさある
+  - AWS Amplify Studioを発表
+    - [これ](https://aws.amazon.com/jp/blogs/news/aws-amplify-studio-figma-to-fullstack-react-app-with-minimal-programming/)
+    - Figmaで
