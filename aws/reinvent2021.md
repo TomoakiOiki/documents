@@ -20,4 +20,7 @@
     - これを機にちょっとさわってみたさある
   - AWS Amplify Studioを発表
     - [これ](https://aws.amazon.com/jp/blogs/news/aws-amplify-studio-figma-to-fullstack-react-app-with-minimal-programming/)
-    - Figmaで
+    - Figmaで作成したデザインからReactのコンポーネントコードを吐き出す事ができる
+    - もともとAmplifyが持っていた認証、ストレージなどの機能も統合されるとのこと
+    - コンポーネントを実装してstorybookに置いとくくらいまでやるデザイナーとかだったらかなり作業工数減りそう
+    - Amplify自体は使いたくないけどコンポーネントコードだけ吐き出したいとかっていう場合にどのくらい手軽にできるのかは気になる
